@@ -1,3 +1,0 @@
-name: webscraper_env
-dependencies:
-    - bs4
