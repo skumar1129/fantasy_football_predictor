@@ -1,0 +1,5 @@
+webscraper/*.json
+node_modules
+model_trainer/*.json
+mobile_app
+

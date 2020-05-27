@@ -4,7 +4,7 @@ import json
 import csv
 
 
-year = 2016
+year = 1995
 for x in range(year,2020):
     url = 'https://www.pro-football-reference.com/years/'+str(x)+'/fantasy.htm'
     its = 1
@@ -61,7 +61,7 @@ for x in range(year,2020):
             "position": position.string if position.string else 'N/A',
             "age": int(age.string),
             "gamesPlayed": int(games_played.string),
-            "gamesStarted": int(games_start.string),
+            "gamesStarted": int(games_start.string) if games_start.string else 0,
             "passComp": int(pass_comp.string),
             "passAtt": int(pass_att.string),
             "passYrds": int(pass_yrds.string),
@@ -71,14 +71,14 @@ for x in range(year,2020):
             "rushYds": int(rush_yds.string),
             "rushYdsPerAtt": float(rush_yds_per_att.string) if rush_yds_per_att.string else 0.0,
             "rushTds": int(rush_tds.string),
-            "recTgt": int(rec_tgt.string),
+            "recTgt": int(rec_tgt.string) if rec_tgt.string else 0,
             "recReceptions": int(rec_receptions.string),
-            "recYards": int(rec_yards.string),
+            "recYards": int(rec_yards.string) if rec_yards.string else 0,
             "recYdsPerAtt": float(rec_yrds_per_reception.string) if rec_yrds_per_reception.string else 0.0,
             "recTds": int(rec_tds.string),
-            "fumbles": int(fumbles.string),
-            "fumblesLost": int(fumbles_lost.string),
-            "scoringTds": int(scoring_tds.string),
+            "fumbles": int(fumbles.string) if fumbles.string else 0,
+            "fumblesLost": int(fumbles_lost.string) if fumbles_lost.string else 0,
+            "scoringTds": int(scoring_tds.string) if scoring_tds.string else 0,
             "scoringTwoPointConversation": int(scoring_two_point_conversation.string) if scoring_two_point_conversation.string else 0,
             "scoringTwoPointPass": int(scoring_two_point_passes.string) if scoring_two_point_passes.string else 0,
             "fantasyPoints": float(fantasy_points.string) if fantasy_points.string else 0.0,
