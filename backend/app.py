@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_pymongo import PyMongo
-from flask_graphql import GraphQLView
 
 
 app=Flask(__name__)
@@ -28,6 +27,18 @@ def find_player(playername):
     else:
        return jsonify({'results': 'None Found'})
         
+
+@app.route('/names')
+def get_names():
+    player_score = mongo.db.PlayersScore
+    names = []
+    player_names = player_score.find()
+    for player in player_names:
+        names.append(player['name'])
+    if len(names) > 0:
+        return jsonify({'names': names})
+    else:
+        return jsonify({'Message': 'Error Finding Names'})
 
 @app.route('/')
 def hello_world():

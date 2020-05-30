@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0eb98e4db80178eb5298f822f403c2ef323f27c1f7a83bd170759854870216e5"
+            "sha256": "b18783ea693039edf2755823df25723eab29bf57ba4219e26ee4419c0032d6de"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -39,13 +39,6 @@
             "index": "pypi",
             "version": "==3.0.8"
         },
-        "flask-graphql": {
-            "hashes": [
-                "sha256:825578c044df436cd74503a38bbd31c919a90acda5e9b6e0e45736964bc5235d"
-            ],
-            "index": "pypi",
-            "version": "==2.0.1"
-        },
         "flask-pymongo": {
             "hashes": [
                 "sha256:620eb02dc8808a5fcb90f26cab6cba9d6bf497b15032ae3ca99df80366e33314",
@@ -53,19 +46,6 @@
             ],
             "index": "pypi",
             "version": "==2.3.0"
-        },
-        "graphql-core": {
-            "hashes": [
-                "sha256:44c9bac4514e5e30c5a595fac8e3c76c1975cae14db215e8174c7fe995825bad",
-                "sha256:aac46a9ac524c9855910c14c48fc5d60474def7f99fd10245e76608eba7af746"
-            ],
-            "version": "==2.3.2"
-        },
-        "graphql-server-core": {
-            "hashes": [
-                "sha256:04ee90da0322949f7b49ff6905688e3a21a9efbd5a7d7835997e431a0afdbd11"
-            ],
-            "version": "==1.2.0"
         },
         "itsdangerous": {
             "hashes": [
@@ -118,12 +98,6 @@
                 "sha256:e8313f01ba26fbbe36c7be1966a7b7424942f670f38e666995b88d012765b9be"
             ],
             "version": "==1.1.1"
-        },
-        "promise": {
-            "hashes": [
-                "sha256:dfd18337c523ba4b6a58801c164c1904a9d4d1b1747c7d5dbf45b693a49d93d0"
-            ],
-            "version": "==2.3"
         },
         "pymongo": {
             "hashes": [
@@ -182,13 +156,6 @@
                 "sha256:f96333f9d2517c752c20a35ff95de5fc2763ac8cdb1653df0f6f45d281620606"
             ],
             "version": "==3.10.1"
-        },
-        "rx": {
-            "hashes": [
-                "sha256:13a1d8d9e252625c173dc795471e614eadfe1cf40ffc684e08b8fff0d9748c23",
-                "sha256:7357592bc7e881a95e0c2013b73326f704953301ab551fbc8133a6fadab84105"
-            ],
-            "version": "==1.6.1"
         },
         "six": {
             "hashes": [
