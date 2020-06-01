@@ -12,7 +12,7 @@ app.config['MONGO_URI'] = 'mongodb://localhost:27017/Fantasy_Football'
 mongo = PyMongo(app)
 
 
-@app.route('/player/<playername>')
+@app.route('/player/<playername>', methods=['GET'])
 def find_player(playername):
     player_score = mongo.db.PlayersScore
     player = player_score.find_one({"name": playername})
@@ -28,7 +28,7 @@ def find_player(playername):
        return jsonify({'results': 'None Found'})
         
 
-@app.route('/names')
+@app.route('/names', methods=['GET'])
 def get_names():
     player_score = mongo.db.PlayersScore
     names = []
