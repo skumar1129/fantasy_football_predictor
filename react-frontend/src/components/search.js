@@ -2,28 +2,32 @@ import React, { useEffect, useState } from 'react';
 import { grabNames } from '../api/api_service';
 
 
-const SearchComp = () => {
-    const [name, setName] = useState([]);
+const SearchComp = (props) => {
+    const [names, setNames] = useState([]);
+    
     useEffect(() => {
         grabNames()
         .then(res => res.data)
         .then(data => {
-            setName(data.names);
+            setNames(data.names);
         })
         .catch(err => console.log(err));
-    }) 
+    }, []);
+    
+    const sendName = (event) => {
+        props.sendName(event.target.value);   
+    }
 
     return(
-        <form>
-            <div className="form-group">
-                <label className="label mr-1">Players</label>
-                <select>
-                {name.map((value,index) => {
-                    return <option key={index}>{value}</option>
-                })}
-                </select>
-            </div>
-        </form>
+         <div className="form-group">
+            <label className="label mr-1">Players</label>
+            <select onChange={sendName}>
+                <option></option>
+            {names.map((value,index) => {
+                return <option key={index}>{value}</option>
+            })}
+            </select>
+        </div>
     )
 }
 
