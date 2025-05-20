@@ -5,7 +5,7 @@ import csv
 
 
 year = 1995
-for x in range(year,2020):
+for x in range(year,2021):
     url = 'https://www.pro-football-reference.com/years/'+str(x)+'/fantasy.htm'
     its = 1
 
